@@ -1,3 +1,5 @@
+package Modelo_1;
+
 import java.util.Queue;
 import java.util.concurrent.ArrayBlockingQueue;
 
@@ -30,7 +32,7 @@ public class Buffer<T> {
 
     @Override
     public String toString() {
-        return "Buffer{" +
+        return "Modelo_1.Buffer{" +
                 "elements=" + elements +
                 '}';
     }

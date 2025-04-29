@@ -1,4 +1,4 @@
-
+package Modelo_1;
 
 public class Produto {
     private int size;
@@ -17,7 +17,7 @@ public class Produto {
 
     @Override
     public String toString() {
-        return "Produto{" + "size=" + size+ '}';
+        return "Modelo_1.Produto{" + "size=" + size+ '}';
     }
 }
 

@@ -1,3 +1,5 @@
+package Modelo_1;
+
 import java.util.Random;
 
 public class BufferInitializer implements Runnable {
@@ -16,9 +18,9 @@ public class BufferInitializer implements Runnable {
     }
 
     public void initializer() {
-        System.out.println("Iniciando BufferInitializer");
+        System.out.println("Iniciando Modelo_1.BufferInitializer");
         BUFFER = new Buffer<>(bufferLimit);
-        System.out.println("Limite do Buffer: " + bufferLimit);
+        System.out.println("Limite do Modelo_1.Buffer: " + bufferLimit);
     }
 
 

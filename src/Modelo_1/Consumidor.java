@@ -1,3 +1,5 @@
+package Modelo_1;
+
 public class Consumidor extends Thread {
     private String name;
     private final BufferInitializer buffer;
