@@ -11,22 +11,19 @@ public class Consumidor extends Thread {
 
     void consumir() {
         synchronized (buffer) {
-            if (buffer.getBuffer().isEmpty()) {
-                while (buffer.getBuffer().isEmpty()) {
-                    try {
-                        buffer.wait();
-                        buffer.notify();po
-                    } catch (InterruptedException e) {
-                        throw new RuntimeException(e);
-                    }
-                }
-            }
+            if (buffer.getBuffer().getSize() > 0) {
+               Produto produto = buffer.getBuffer().removeElement();
+               System.out.println("Consumidor consumiu " + produto);
+
+           }
+
+
         }
 
     }
 
     @Override
     public void run() {
-
+        consumir();
     }
 }

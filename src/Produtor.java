@@ -15,7 +15,7 @@ public class Produtor extends Thread {
 
     }
 
-    void criarProduto() {
+    void produzir() {
         while (running) {
             synchronized (am) {
                 if (am.getBuffer().getSize() == am.getBufferLimit()) {
@@ -30,6 +30,7 @@ public class Produtor extends Thread {
                 p = new Produto(new Random().nextInt());
                 am.getBuffer().addElement(p);
                 System.out.println(Thread.currentThread().getName() + " Produziu o produto -> "+p);
+                am.notify();
             }
 
         }
@@ -37,7 +38,7 @@ public class Produtor extends Thread {
 
     public void run() {
         for (int i = 0; i <= am.getBufferLimit() - 1; i++) {
-            criarProduto();
+            produzir();
         }
         am.run();
 

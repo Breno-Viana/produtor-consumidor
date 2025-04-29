@@ -24,6 +24,10 @@ public class Buffer<T> {
         return elements.isEmpty();
     }
 
+    public T removeElement() {
+        return elements.remove();
+    }
+
     @Override
     public String toString() {
         return "Buffer{" +
