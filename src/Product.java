@@ -1,5 +1,3 @@
-package Modelo_2;
-
 public class Product {
     private int id;
 

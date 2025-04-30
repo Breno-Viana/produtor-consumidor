@@ -1,9 +1,6 @@
-package Modelo_2;
-
-import java.util.Random;
-
 public class Main {
     private static Buffer<Product> buffer;
+    private static int CAPACITY;
 
 
     public static void main(String[] args) throws InterruptedException {
@@ -17,7 +14,7 @@ public class Main {
         }, "producer");
         Thread consumer = new Thread(new Runnable() {
             @Override
-            public void run () {
+            public void run() {
                 pac.consume();
             }
         }, "consumer");
@@ -32,8 +29,8 @@ public class Main {
 
     private static void initializeBuffer() {
         System.out.println("Inicializando Buffer...");
-        int capacity = new Random().nextInt(100);
-        buffer = new Buffer<>(capacity);
-        System.out.println("Buffer carregado com a capacidade " + capacity);
+        CAPACITY = 10;
+        buffer = new Buffer<>(CAPACITY);
+        System.out.println("Buffer carregado com a capacidade " + CAPACITY);
     }
 }
