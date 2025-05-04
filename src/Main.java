@@ -21,6 +21,9 @@ public class Main {
 
         consumer.start();
         producer.start();
+        consumer.join();
+        producer.join();
+        System.out.println("Terminado");
     }
 
 
