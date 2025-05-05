@@ -29,5 +29,10 @@ public class Main {
         CAPACITY = 10;
         buffer = new Buffer<>(CAPACITY);
         System.out.println("Buffer carregado com a capacidade " + CAPACITY);
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
